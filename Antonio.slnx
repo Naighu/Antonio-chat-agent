@@ -2,6 +2,7 @@
   <Folder Name="/tests/">
     <Project Path="tests/Antonio.Core.Test/Antonio.Core.Test.csproj" />
     <Project Path="tests/Antonio.Api.Tests/Antonio.Api.Tests.csproj" />
+    <Project Path="tests/Antonio.Infrastructure.Tests/Antonio.Infrastructure.Tests.csproj" />
   </Folder>
   <Project Path="Antonio.Api/Antonio.Api.csproj" />
   <Project Path="Antonio.Cli/Antonio.Cli.csproj" />

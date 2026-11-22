@@ -38,8 +38,6 @@ public sealed class ClaudeLlmClient(HttpClient http, IOptions<ClaudeLlmOptions> 
          var result = await response.Content.ReadFromJsonAsync<ClaudeResponse>(Json, ct)
             ?? throw new InvalidOperationException("Empty response from Claude API.");
         var raw = await response.Content.ReadAsStringAsync(ct);
-        Console.WriteLine(result.Usage.InputTokens);
-        Console.WriteLine(result.Usage.OutputTokens);
 
         return new LlmResponse(
             Text: string.Concat(result.Content.Where(b => b.Type == "text").Select(b => b.Text)),

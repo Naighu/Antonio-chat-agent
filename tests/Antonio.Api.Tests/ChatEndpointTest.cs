@@ -1,12 +1,11 @@
 using System.Net;
 using System.Net.Http.Json;
 using Antonio.Api.Dtos;
-using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace Antonio.Api.Tests;
 
-public class ChatEndpointTests(WebApplicationFactory<Program> factory)
-    : IClassFixture<WebApplicationFactory<Program>>
+public class ChatEndpointTests(AntonioApiFactory factory)
+    : IClassFixture<AntonioApiFactory>
 {
     [Fact]
     public async Task PostChat_ReturnsReply()
