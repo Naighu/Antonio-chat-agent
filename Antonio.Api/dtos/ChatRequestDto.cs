@@ -1,4 +1,4 @@
-namespace Antonio.Api.dtos;
+namespace Antonio.Api.Dtos;
 
 public record ChatRequestDto(
     string SessionId,

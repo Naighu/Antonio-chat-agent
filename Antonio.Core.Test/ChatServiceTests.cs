@@ -27,8 +27,14 @@ public sealed class ChatServiceTests
 
         Assert.Equal(Role.User, last.Role);
         Assert.Equal("turnoff the light", last.Text);
+    }
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task SendAsync_RejectsEmptyMessage(string message)
+    {
+        var service = new ChatService(new FakeLlmClient("ok"));
 
-
-
+        await Assert.ThrowsAsync<ArgumentException>(() => service.SendAsync("s1", message));
     }
 }
