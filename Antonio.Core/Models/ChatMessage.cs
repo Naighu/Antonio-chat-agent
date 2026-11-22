@@ -3,8 +3,8 @@ namespace Antonio.Core.Models;
 
 public enum Role
 {
-    user,
-    agent
+    User,
+    Agent
 }
 public sealed record  ChatMessage(
     Role Role,

@@ -10,7 +10,7 @@ public enum ResponseStatus
 }
 public record  LlmResponse(
     ResponseStatus Status,
-    string Reply,
+    string Text,
     int InputTokens,
     int OutputTokens
 );
