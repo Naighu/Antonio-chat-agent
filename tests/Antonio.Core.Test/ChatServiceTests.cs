@@ -1,6 +1,6 @@
+using Antonio.Core.Models;
 using Antonio.Core.Services;
 using Antonio.Core.Test.Fakes;
-using Antonio.Core.Models;
 
 namespace Antonio.Core.Test;
 

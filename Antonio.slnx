@@ -1,7 +1,10 @@
 <Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/Antonio.Core.Test/Antonio.Core.Test.csproj" />
+    <Project Path="tests/Antonio.Api.Tests/Antonio.Api.Tests.csproj" />
+  </Folder>
   <Project Path="Antonio.Api/Antonio.Api.csproj" />
   <Project Path="Antonio.Cli/Antonio.Cli.csproj" />
-  <Project Path="Antonio.Core.Test/Antonio.Core.Test.csproj" />
   <Project Path="Antonio.Core/Antonio.Core.csproj" />
   <Project Path="Antonio.Infrastructure/Antonio.Infrastructure.csproj" />
 </Solution>
