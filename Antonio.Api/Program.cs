@@ -1,11 +1,13 @@
 using Antonio.Api.Endpoints;
+using Antonio.Api.ErrorHandling;
 using Antonio.Core.Abstractions;
 using Antonio.Core.Services;
 using Antonio.Infrastructure;
 using Antonio.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddExceptionHandler<ApiExceptionHandler>();
+builder.Services.AddProblemDetails();
 builder.Services.AddInfrastructure(builder.Configuration);  
 builder.Services.AddScoped<ChatService>();
 builder.Services.AddSingleton<IConversationStore,InMemoryConversationStore>();
@@ -15,6 +17,7 @@ builder.Services.AddSingleton<IConversationStore,InMemoryConversationStore>();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+app.UseExceptionHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
