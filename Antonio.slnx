@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Antonio.Api/Antonio.Api.csproj" />
+  <Project Path="Antonio.Cli/Antonio.Cli.csproj" />
+  <Project Path="Antonio.Core.Test/Antonio.Core.Test.csproj" />
+  <Project Path="Antonio.Core/Antonio.Core.csproj" />
+  <Project Path="Antonio.Infrastructure/Antonio.Infrastructure.csproj" />
+</Solution>
