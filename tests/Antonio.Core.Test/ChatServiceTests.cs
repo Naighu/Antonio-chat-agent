@@ -14,7 +14,7 @@ public sealed class ChatServiceTests
         var service = new ChatService(fake);
 
         var reply = await service.SendAsync("session", "hi" );
-        Assert.Equal("Hello From Test", reply);
+        Assert.Equal("Hello From Test", reply.Text);
     }
     [Fact]
     public async Task SendAsync_UserMessageToLlm()

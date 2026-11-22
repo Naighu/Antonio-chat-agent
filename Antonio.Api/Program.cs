@@ -1,11 +1,11 @@
-using Antonio.Api.Dev;
 using Antonio.Api.Endpoints;
 using Antonio.Core.Abstractions;
 using Antonio.Core.Services;
+using Antonio.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<ILlmClient, EchoLlmClient>();
+builder.Services.AddInfrastructure(builder.Configuration);  
 builder.Services.AddScoped<ChatService>();
 
 // Add services to the container.

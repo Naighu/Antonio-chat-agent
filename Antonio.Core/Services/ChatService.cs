@@ -7,7 +7,7 @@ public sealed class ChatService(ILlmClient llm)
 {
 
 
-    public async Task<string>  SendAsync(string sessionId, string message, CancellationToken ct = default)
+    public async Task<LlmResponse>  SendAsync(string sessionId, string message, CancellationToken ct = default)
     {
 
         if(string.IsNullOrWhiteSpace(message))
@@ -21,6 +21,6 @@ public sealed class ChatService(ILlmClient llm)
         );
 
         var response = await llm.CompleteAsync(request,ct);
-        return response.Text;
+        return response;
     }
 }
